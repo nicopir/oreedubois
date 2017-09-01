@@ -207,20 +207,23 @@
       <p><i class="fa fa-envelope-o w3-text-orange w3-xlarge"></i>	test@test.com</p>
     </div>
     <div class="w3-col m7">
-      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="https://formspree.io/nicolas.pirotte@gmail.com"
+      method="POST" target="_blank" onsubmit="return confirm('Do you really want to submit the form?');">
       <div class="w3-section">      
         <label>Name</label>
-        <input class="w3-input" type="text" name="Name" required>
+        <input class="w3-input" type="text" name="name" required>
       </div>
       <div class="w3-section">      
         <label>Email</label>
-        <input class="w3-input" type="text" name="Email" required>
+        <input class="w3-input" type="email" name="_replyto" required>
       </div>
       <div class="w3-section">      
         <label>Message</label>
-        <input class="w3-input" type="text" name="Message" required>
+        <input class="w3-input" type="text" name="message" required>
       </div>  
-     <button class="w3-button w3-orange w3-padding-large" type="submit">
+	  
+
+     <button class="w3-button w3-orange w3-padding-large" type="submit" onclick="show_alert();">
             <i class="fa fa-paper-plane"></i> Envoyer
           </button>
 		  
@@ -245,6 +248,8 @@ var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
   marker.setMap(map);
 }
 </script>
+
+
     </div>
   </div>
 </div>
